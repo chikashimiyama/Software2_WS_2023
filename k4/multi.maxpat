@@ -38,14 +38,54 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 247.0, 84.0, 24.0, 24.0 ],
+					"presentation_rect" : [ 251.5, 84.0, 0.0, 0.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 339.0, 238.0, 158.0, 22.0 ],
+					"style" : "",
+					"text" : "buffer~ img2 @samps 1024"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 339.0, 208.0, 159.0, 22.0 ],
+					"style" : "",
+					"text" : "buffer~ real2 @samps 1024"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-15",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 339.0, 176.0, 152.0, 22.0 ],
+					"patching_rect" : [ 339.0, 176.0, 158.0, 22.0 ],
 					"style" : "",
-					"text" : "buffer~ img @samps 1024"
+					"text" : "buffer~ img1 @samps 1024"
 				}
 
 			}
@@ -56,9 +96,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 339.0, 146.0, 152.0, 22.0 ],
+					"patching_rect" : [ 339.0, 146.0, 159.0, 22.0 ],
 					"style" : "",
-					"text" : "buffer~ real @samps 1024"
+					"text" : "buffer~ real1 @samps 1024"
 				}
 
 			}
@@ -94,7 +134,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 137.0, 186.0, 45.0, 45.0 ],
+					"patching_rect" : [ 102.0, 208.0, 45.0, 45.0 ],
 					"style" : ""
 				}
 
@@ -106,7 +146,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 132.0, 79.0, 82.0, 22.0 ],
+					"patching_rect" : [ 43.0, 67.0, 82.0, 22.0 ],
 					"style" : "",
 					"text" : "play~ sample"
 				}
@@ -119,7 +159,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 132.0, 31.0, 34.0, 22.0 ],
+					"patching_rect" : [ 43.0, 19.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "start"
 				}
@@ -133,7 +173,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 255.0, 89.0, 24.0, 24.0 ],
+					"patching_rect" : [ 189.5, 84.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -142,12 +182,12 @@
 				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
+					"numinlets" : 3,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 132.0, 139.0, 134.0, 22.0 ],
 					"style" : "",
-					"text" : "pfft~ freezecore 2048 4"
+					"text" : "pfft~ multicore 2048 4"
 				}
 
 			}
@@ -162,15 +202,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 1 ],
-					"order" : 0,
-					"source" : [ "obj-3", 0 ]
+					"source" : [ "obj-3", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
-					"order" : 1,
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -179,6 +217,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-3", 1 ],
 					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 2 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -205,7 +250,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "freezecore.maxpat",
+				"name" : "multicore.maxpat",
 				"bootpath" : "~/Works/Event/2018/Software1/k4",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
