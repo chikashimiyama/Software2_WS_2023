@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 93.0, 104.0, 1052.0, 586.0 ],
+		"rect" : [ 93.0, 104.0, 373.0, 328.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,12 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-11",
+					"id" : "obj-6",
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 39.0, 62.0, 34.0, 22.0 ],
+					"patching_rect" : [ 72.0, 48.0, 34.0, 22.0 ],
 					"style" : "",
 					"text" : "start"
 				}
@@ -51,41 +51,14 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
+					"id" : "obj-3",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
-					"patching_rect" : [ 39.0, 96.0, 82.0, 22.0 ],
+					"patching_rect" : [ 72.0, 97.0, 82.0, 22.0 ],
 					"style" : "",
 					"text" : "play~ sample"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"format" : 6,
-					"id" : "obj-5",
-					"maxclass" : "flonum",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 173.0, 135.0, 50.0, 22.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "float" ],
-					"patching_rect" : [ 173.0, 89.0, 31.0, 22.0 ],
-					"style" : "",
-					"text" : "!/ 1."
 				}
 
 			}
@@ -98,7 +71,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 173.0, 46.0, 50.0, 22.0 ],
+					"patching_rect" : [ 170.0, 119.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -110,7 +83,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 302.0, 132.0, 50.0, 22.0 ],
+					"patching_rect" : [ 233.0, 117.0, 50.0, 22.0 ],
 					"style" : "",
 					"text" : "replace"
 				}
@@ -123,7 +96,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 302.0, 166.0, 90.0, 22.0 ],
+					"patching_rect" : [ 233.0, 151.0, 90.0, 22.0 ],
 					"style" : "",
 					"text" : "buffer~ sample"
 				}
@@ -147,9 +120,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 247.0, 259.5, 152.0, 22.0 ],
+					"patching_rect" : [ 178.0, 244.5, 145.0, 22.0 ],
 					"style" : "",
-					"text" : "buffer~ img @samps 1024"
+					"text" : "buffer~ img @samps 512"
 				}
 
 			}
@@ -160,9 +133,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 247.0, 226.5, 152.0, 22.0 ],
+					"patching_rect" : [ 178.0, 211.5, 146.0, 22.0 ],
 					"style" : "",
-					"text" : "buffer~ real @samps 1024"
+					"text" : "buffer~ real @samps 512"
 				}
 
 			}
@@ -173,9 +146,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 72.0, 174.0, 105.0, 22.0 ],
+					"patching_rect" : [ 72.0, 174.0, 117.0, 22.0 ],
 					"style" : "",
-					"text" : "pfft~ scale 2048 4"
+					"text" : "pfft~ shift 2048 4"
 				}
 
 			}
@@ -205,49 +178,35 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-1", 1 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-5", 0 ]
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-3", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-6", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-6", 1 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "scale.maxpat",
+				"name" : "shift.maxpat",
 				"bootpath" : "~/Works/Event/2018/Software1/k5",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
