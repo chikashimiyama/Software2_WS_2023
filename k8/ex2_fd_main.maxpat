@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -22.0, 329.0, 1359.0, 673.0 ],
+		"rect" : [ 61.0, 329.0, 1359.0, 673.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,23 +38,11 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 353.0, 161.0, 150.0, 20.0 ],
-					"style" : "",
-					"text" : "46th bin"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-3",
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 307.0, 45.0, 45.0 ],
+					"patching_rect" : [ 267.0, 272.0, 45.0, 45.0 ],
 					"style" : ""
 				}
 
@@ -78,9 +66,9 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 262.5, 223.0, 90.0, 22.0 ],
+					"patching_rect" : [ 262.5, 223.0, 107.0, 22.0 ],
 					"style" : "",
-					"text" : "pfft~ ex2 256 2"
+					"text" : "pfft~ ex2_fd 256 2"
 				}
 
 			}
@@ -94,7 +82,7 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "ex2.maxpat",
+				"name" : "ex2_fd.maxpat",
 				"bootpath" : "~/Works/Event/2018/Software1/k8",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
