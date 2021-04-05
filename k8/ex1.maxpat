@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
+			"major" : 8,
+			"minor" : 1,
 			"revision" : 5,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 586.0, 374.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -36,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-8",
@@ -43,8 +45,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 296.0, 184.0, 150.0, 20.0 ],
-					"presentation_rect" : [ 296.0, 186.0, 0.0, 0.0 ],
-					"style" : "",
 					"text" : "phase always 0"
 				}
 
@@ -56,9 +56,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 9.0, 157.0, 150.0, 47.0 ],
-					"style" : "",
-					"text" : "amp = 3 \nif index = 20\nelse 0"
+					"patching_rect" : [ 57.0, 170.5, 80.0, 47.0 ],
+					"text" : "amp = 3 \nif index = 25\nelse 0"
 				}
 
 			}
@@ -70,7 +69,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 245.0, 157.0, 43.0, 22.0 ],
-					"style" : "",
 					"text" : "sig~ 0"
 				}
 
@@ -83,7 +81,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 155.0, 209.0, 109.0, 22.0 ],
-					"style" : "",
 					"text" : "poltocar~"
 				}
 
@@ -96,7 +93,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 155.0, 157.0, 80.0, 22.0 ],
-					"style" : "",
 					"text" : "index~ amps"
 				}
 
@@ -108,7 +104,6 @@
 					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 155.0, 259.0, 109.0, 22.0 ],
-					"style" : "",
 					"text" : "fftout~ 1"
 				}
 
@@ -121,7 +116,6 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "signal" ],
 					"patching_rect" : [ 127.0, 103.0, 47.0, 22.0 ],
-					"style" : "",
 					"text" : "fftin~ 1"
 				}
 
@@ -162,7 +156,9 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [  ],
+		"autosave" : 0
 	}
 
 }

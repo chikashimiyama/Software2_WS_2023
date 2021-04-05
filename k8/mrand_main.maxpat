@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
-			"architecture" : "x86",
+			"major" : 8,
+			"minor" : 1,
+			"revision" : 5,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 867.0, 274.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -36,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-6",
@@ -44,7 +46,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 198.0, 113.0, 46.0, 22.0 ],
-					"style" : "",
 					"text" : "noise~"
 				}
 
@@ -55,8 +56,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 107.0, 220.0, 45.0, 45.0 ],
-					"style" : ""
+					"patching_rect" : [ 107.0, 220.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -68,7 +68,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 107.0, 47.0, 34.0, 22.0 ],
-					"style" : "",
 					"text" : "start"
 				}
 
@@ -81,7 +80,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
 					"patching_rect" : [ 288.0, 113.0, 157.0, 22.0 ],
-					"style" : "",
 					"text" : "buffer~ sample spoken.wav"
 				}
 
@@ -94,7 +92,6 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "bang" ],
 					"patching_rect" : [ 107.0, 89.0, 82.0, 22.0 ],
-					"style" : "",
 					"text" : "play~ sample"
 				}
 
@@ -106,9 +103,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 107.0, 158.0, 110.0, 22.0 ],
-					"style" : "",
-					"text" : "pfft~ abash 1024 2"
+					"patching_rect" : [ 107.0, 158.0, 109.0, 22.0 ],
+					"text" : "pfft~ mrand 1024 2"
 				}
 
 			}
@@ -159,8 +155,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "abash.maxpat",
-				"bootpath" : "~/Works/Event/2018/Software1/k8",
+				"name" : "mrand.maxpat",
+				"bootpath" : "~/Works/Event/2021/Software2-SS2021/k8",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
