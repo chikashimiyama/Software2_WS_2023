@@ -43,13 +43,13 @@
 					"basictuning" : 440,
 					"data" : 					{
 						"clips" : [ 							{
-								"absolutepath" : "Macintosh HD:/Users/chikashi/Works/Event/2023/Software2_WS_2023/k2/spoken.wav",
+								"absolutepath" : "spoken.wav",
 								"filename" : "spoken.wav",
 								"filekind" : "audiofile",
-								"id" : "u705009081",
-								"loop" : 1,
+								"id" : "u410004192",
+								"loop" : 0,
 								"content_state" : 								{
-									"loop" : 1
+
 								}
 
 							}
@@ -67,7 +67,7 @@
 					"originaltempo" : 120.0,
 					"outlettype" : [ "signal", "signal", "signal", "", "dictionary" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 67.0, 59.0, 150.0, 30.0 ],
+					"patching_rect" : [ 67.0, 70.0, 150.0, 30.0 ],
 					"pitchcorrection" : 0,
 					"quality" : "basic",
 					"timestretch" : [ 0 ]
@@ -80,7 +80,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 228.0, 118.0, 150.0, 20.0 ],
+					"patching_rect" : [ 217.0, 126.0, 150.0, 20.0 ],
 					"text" : "threshold"
 				}
 
@@ -94,7 +94,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 176.0, 118.0, 50.0, 22.0 ]
+					"patching_rect" : [ 165.0, 126.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -105,8 +105,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 67.0, 163.0, 128.0, 22.0 ],
-					"text" : "pfft~ limitercore 512 2"
+					"patching_rect" : [ 67.0, 163.0, 117.0, 22.0 ],
+					"text" : "pfft~ a2_core 512 2"
 				}
 
 			}
@@ -153,15 +153,15 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "limitercore.maxpat",
-				"bootpath" : "~/Works/Event/2023/Software2_WS_2023/k2",
+				"name" : "a2_core.maxpat",
+				"bootpath" : "~/Works/Event/2023/Software2_WS_2023/k2/assignments",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "spoken.wav",
-				"bootpath" : "~/Works/Event/2023/Software2_WS_2023/k2",
+				"bootpath" : "~/Works/Event/2023/Software2_WS_2023/k2/assignments",
 				"patcherrelativepath" : ".",
 				"type" : "WAVE",
 				"implicit" : 1

@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
-			"architecture" : "x86",
+			"major" : 8,
+			"minor" : 5,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 1075.0, 356.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -36,15 +37,27 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
+					"patching_rect" : [ 183.0, 205.0, 100.0, 22.0 ],
+					"text" : "cartopol~"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 311.0, 165.0, 30.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 427.0, 150.0, 30.0, 22.0 ],
 					"text" : "in 2"
 				}
 
@@ -56,8 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 194.0, 219.0, 45.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 183.0, 252.0, 258.0, 22.0 ],
 					"text" : ">~ 0.5"
 				}
 
@@ -69,8 +81,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 129.0, 277.0, 29.5, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 172.5, 336.0, 29.5, 22.0 ],
 					"text" : "*~"
 				}
 
@@ -82,22 +93,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 78.25, 277.0, 29.5, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 80.25, 336.0, 29.5, 22.0 ],
 					"text" : "*~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 194.0, 175.0, 60.0, 22.0 ],
-					"style" : "",
-					"text" : "cartopol~"
 				}
 
 			}
@@ -107,8 +104,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 78.25, 333.0, 54.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 80.25, 392.0, 54.0, 22.0 ],
 					"text" : "fftout~ 1"
 				}
 
@@ -120,8 +116,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "signal" ],
-					"patching_rect" : [ 78.25, 90.0, 47.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 78.25, 90.0, 184.0, 22.0 ],
 					"text" : "fftin~ 1"
 				}
 
