@@ -2,14 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 5,
-			"architecture" : "x86",
+			"major" : 8,
+			"minor" : 5,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ -22.0, 329.0, 1359.0, 673.0 ],
+		"classnamespace" : "box",
+		"rect" : [ 937.0, 289.0, 974.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,15 +37,29 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "comment",
+					"format" : 6,
+					"id" : "obj-13",
+					"maxclass" : "flonum",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 353.0, 161.0, 150.0, 20.0 ],
-					"style" : "",
-					"text" : "46th bin"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 143.0, 148.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 143.0, 191.0, 100.0, 22.0 ],
+					"text" : "cycle~ 1000"
 				}
 
 			}
@@ -54,21 +69,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 336.0, 307.0, 45.0, 45.0 ],
-					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 262.5, 153.0, 75.0, 22.0 ],
-					"style" : "",
-					"text" : "cycle~ 1000"
+					"patching_rect" : [ 143.0, 275.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -78,24 +79,30 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 262.5, 223.0, 90.0, 22.0 ],
-					"style" : "",
-					"text" : "pfft~ ex2 256 2"
+					"patching_rect" : [ 143.0, 225.0, 138.0, 22.0 ],
+					"text" : "pfft~ a5_core 256"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-13", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-1", 0 ]
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "ex2.maxpat",
-				"bootpath" : "~/Works/Event/2018/Software1/k8",
+				"name" : "a5_core.maxpat",
+				"bootpath" : "~/Works/Event/2023/Software2_WS_2023/k8/assignment",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
