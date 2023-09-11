@@ -40,26 +40,61 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"format" : 6,
-					"id" : "obj-13",
-					"maxclass" : "flonum",
+					"id" : "obj-11",
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 143.0, 148.0, 50.0, 22.0 ]
+					"numoutlets" : 0,
+					"patching_rect" : [ 393.0, 80.0, 150.0, 20.0 ],
+					"text" : "frameaccum"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
+					"format" : 6,
+					"id" : "obj-9",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 386.0, 123.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "float", "bang" ],
+					"patching_rect" : [ 473.0, 216.0, 188.0, 22.0 ],
+					"text" : "buffer~ amps @samps 128"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 143.0, 191.0, 100.0, 22.0 ],
-					"text" : "cycle~ 1000"
+					"outlettype" : [ "float" ],
+					"patching_rect" : [ 473.0, 175.0, 76.0, 22.0 ],
+					"text" : "peek~ amps"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 473.0, 123.0, 89.0, 22.0 ],
+					"text" : "loadmess 5 3"
 				}
 
 			}
@@ -69,7 +104,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 143.0, 275.0, 45.0, 45.0 ]
+					"patching_rect" : [ 267.0, 257.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -77,31 +112,48 @@
 				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 143.0, 225.0, 138.0, 22.0 ],
-					"text" : "pfft~ a7_core 256"
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 267.0, 176.0, 138.0, 22.0 ],
+					"text" : "pfft~ a8_core 256"
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-6", 0 ],
-					"source" : [ "obj-13", 0 ]
+					"destination" : [ "obj-3", 1 ],
+					"order" : 0,
+					"source" : [ "obj-2", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 0 ],
-					"source" : [ "obj-6", 0 ]
+					"destination" : [ "obj-3", 0 ],
+					"order" : 1,
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 1 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "a7_core.maxpat",
+				"name" : "a8_core.maxpat",
 				"bootpath" : "~/Works/Event/2023/Software2_WS_2023/k8/assignment",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
