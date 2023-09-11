@@ -2,13 +2,14 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
-			"architecture" : "x86",
+			"major" : 8,
+			"minor" : 5,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
+		"classnamespace" : "box",
 		"rect" : [ 253.0, 148.0, 1147.0, 764.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
@@ -36,15 +37,27 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-9",
+					"linecount" : 2,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 226.0, 108.0, 150.0, 33.0 ],
+					"text" : "0 = eq1\n1 = eq2"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "spectroscope~",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 236.0, 363.0, 376.0, 94.0 ],
-					"style" : ""
+					"patching_rect" : [ 142.0, 232.0, 376.0, 94.0 ]
 				}
 
 			}
@@ -57,8 +70,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 162.0, 108.0, 50.0, 22.0 ],
-					"style" : ""
+					"patching_rect" : [ 162.0, 108.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -69,8 +81,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 236.0, 213.0, 105.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 532.0, 209.0, 105.0, 22.0 ],
 					"text" : "loadmess set eq2"
 				}
 
@@ -83,9 +94,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 6,
 					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
-					"patching_rect" : [ 236.0, 243.0, 376.0, 78.0 ],
+					"patching_rect" : [ 532.0, 239.0, 376.0, 78.0 ],
 					"setmode" : 4,
-					"style" : "",
 					"voffset" : 1.0
 				}
 
@@ -97,8 +107,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 410.0, 48.0, 146.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 706.0, 44.0, 146.0, 22.0 ],
 					"text" : "buffer~ eq2 @samps 256"
 				}
 
@@ -111,7 +120,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 86.0, 77.0, 46.0, 22.0 ],
-					"style" : "",
 					"text" : "noise~"
 				}
 
@@ -123,21 +131,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 236.0, 82.0, 105.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 532.0, 78.0, 105.0, 22.0 ],
 					"text" : "loadmess set eq1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-13",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 525.0, 89.0, 87.0, 20.0 ],
-					"style" : "",
-					"text" : "draw mode"
 				}
 
 			}
@@ -149,9 +144,8 @@
 					"numinlets" : 5,
 					"numoutlets" : 6,
 					"outlettype" : [ "float", "float", "float", "float", "list", "" ],
-					"patching_rect" : [ 236.0, 112.0, 376.0, 78.0 ],
+					"patching_rect" : [ 532.0, 108.0, 376.0, 78.0 ],
 					"setmode" : 4,
-					"style" : "",
 					"voffset" : 1.0
 				}
 
@@ -163,8 +157,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "float", "bang" ],
-					"patching_rect" : [ 239.0, 48.0, 146.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 535.0, 44.0, 146.0, 22.0 ],
 					"text" : "buffer~ eq1 @samps 256"
 				}
 
@@ -175,8 +168,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 69.0, 231.0, 45.0, 45.0 ],
-					"style" : ""
+					"patching_rect" : [ 86.0, 232.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -187,9 +179,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 86.0, 168.0, 137.0, 22.0 ],
-					"style" : "",
-					"text" : "pfft~ eqcore_interp 512"
+					"patching_rect" : [ 86.0, 176.0, 137.0, 22.0 ],
+					"text" : "pfft~ a3_core 512"
 				}
 
 			}
@@ -248,8 +239,8 @@
 			}
  ],
 		"dependency_cache" : [ 			{
-				"name" : "eqcore_interp.maxpat",
-				"bootpath" : "~/Works/Event/2018/Software1/k3",
+				"name" : "a3_core.maxpat",
+				"bootpath" : "~/Works/Event/2023/Software2_WS_2023/k3/assignments",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

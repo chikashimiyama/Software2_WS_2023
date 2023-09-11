@@ -2,14 +2,15 @@
 	"patcher" : 	{
 		"fileversion" : 1,
 		"appversion" : 		{
-			"major" : 7,
-			"minor" : 3,
-			"revision" : 4,
-			"architecture" : "x86",
+			"major" : 8,
+			"minor" : 5,
+			"revision" : 0,
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 586.0, 419.0, 445.0, 269.0 ],
+		"classnamespace" : "box",
+		"rect" : [ 586.0, 419.0, 674.0, 386.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -36,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-23",
@@ -43,8 +45,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 242.0, 207.0, 69.5, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 178.0, 221.0, 92.5, 22.0 ],
 					"text" : "+~"
 				}
 
@@ -56,8 +57,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 242.0, 166.0, 29.5, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 251.0, 181.0, 29.5, 22.0 ],
 					"text" : "*~"
 				}
 
@@ -69,12 +69,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 373.0, 94.0, 30.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
-					"style" : "",
+					"patching_rect" : [ 301.0, 135.0, 30.0, 22.0 ],
 					"text" : "in 1"
 				}
 
@@ -86,9 +81,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 242.0, 124.0, 29.5, 22.0 ],
-					"style" : "",
-					"text" : "-~"
+					"patching_rect" : [ 251.0, 135.0, 29.5, 22.0 ],
+					"text" : "!-~"
 				}
 
 			}
@@ -99,8 +93,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 275.0, 85.0, 70.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 266.0, 91.0, 70.0, 22.0 ],
 					"text" : "index~ eq2"
 				}
 
@@ -112,8 +105,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 135.0, 166.0, 29.5, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 135.0, 284.0, 29.5, 22.0 ],
 					"text" : "*~"
 				}
 
@@ -125,8 +117,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 94.0, 166.0, 29.5, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 94.0, 284.0, 29.5, 22.0 ],
 					"text" : "*~"
 				}
 
@@ -138,8 +129,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 187.0, 85.0, 70.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 178.0, 91.0, 70.0, 22.0 ],
 					"text" : "index~ eq1"
 				}
 
@@ -150,8 +140,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 94.0, 207.0, 60.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 94.0, 325.0, 60.0, 22.0 ],
 					"text" : "fftout~ 1"
 				}
 
@@ -163,8 +152,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "signal" ],
-					"patching_rect" : [ 94.0, 19.0, 47.0, 22.0 ],
-					"style" : "",
+					"patching_rect" : [ 94.0, 19.0, 101.0, 22.0 ],
 					"text" : "fftin~ 1"
 				}
 
@@ -173,15 +161,6 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 1 ],
-					"order" : 1,
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-23", 1 ],
-					"order" : 0,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -202,7 +181,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-23", 0 ],
+					"destination" : [ "obj-23", 1 ],
 					"source" : [ "obj-22", 0 ]
 				}
 
@@ -256,6 +235,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-14", 0 ],
+					"order" : 0,
+					"source" : [ "obj-5", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-23", 0 ],
+					"order" : 1,
 					"source" : [ "obj-5", 0 ]
 				}
 
